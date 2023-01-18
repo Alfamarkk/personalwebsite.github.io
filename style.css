@@ -1,0 +1,329 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Header*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 90px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+
+}
+
+.navlist{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.bt{
+    margin-left: 50px;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    border: 2px solid transparent;
+    padding: 6px 7px;
+    font-weight: 500;
+    
+}
+
+.navlist ul li a{
+    color: white;
+}
+
+.navlist ul li a:hover{
+    color: darkorange;
+    transition: .2s;
+}
+
+.logo{
+	color: white;
+	font-size: 35px;
+	font-family: arial;
+	padding-left: 0px;
+    padding-right: 100px;
+	float: left;
+	padding-top: 10px;
+}
+
+.logo span{
+    color: darkorange;
+}
+ 
+
+form{
+	margin-right: 100px;
+}
+
+.search{
+	position: relative;
+	left: 130%;
+	bottom: 55%;
+}
+
+.srch{
+    position: relative;
+    left: 140px;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 200px;
+	height: 33px;
+	background: transparent;
+	border: 1px solid white;
+	margin-top: 13px;
+	color: white;
+	border-right: 5px;
+	font-size: 16px;
+	float: left;
+	padding: 10px;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+    margin-right: 50px;
+}
+
+.btn{
+    position: relative;
+    left: 90px;
+	width: 100px;
+	height: 33px;
+	background: orange;
+	border: 2px solid beige;
+	margin-top: 13px;
+    margin-right: 10px;
+	color: black;
+	font-size: 15px;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+	transition: 0.2s ease-in-out;
+}
+
+.btn:hover{
+	background-color: whitesmoke;
+}
+
+input{
+	color: red;
+}
+/*end of header*/
+/*hero section*/
+#hero{
+    background-image: url(./img/mt.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+
+#hero .hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(2){
+    animation-delay: 2s;
+}
+
+#hero h1:nth-child(3){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+}
+
+
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: darkorange;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .3s;
+}
+
+#hero h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+
+#hero h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+
+#hero h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+#hero .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: darkorange;
+    background-color: transparent;
+    border: 2px solid darkorange;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 36px;
+    transition: .3s ease-in-out;
+}
+
+#hero .cta:hover{
+    color: white;
+    background-color: darkorange;
+}
+/* end of hero section*/
+
+/*text transition*/
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal_name{
+    100%{
+        color: darkorange;
+    }
+}
+
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+/* end of text transition*/
+    
+/*Footer*/
+.footer{
+	background-color: #f9ece6;
+	text-align: center;
+}
+
+.footer .wrap{
+	background-color: wheat;
+	padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.footer .site-footer .wrap{
+	background-color: #f9ece6;
+}
+
+.credentials{
+	font-size: 13px;
+	letter-spacing: 1px;
+	font-family:'Manserrat', sans-serif;
+    margin-bottom: -50px;
+    margin-top: 30px;
+}
+
+.icon{
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	margin-top: -50px;
+	margin-bottom: 30px;
+	margin-right: 20px;
+}
+
+.icon ul{
+	list-style-type: none;
+	display: -webkit-inline-box;
+}
+
+.icon li{
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 16px;
+	padding: 8px;
+	border: solid black 1px;
+	margin-left: 20px;
+}
+
+.icon li i{
+    padding: 3px 5px;
+}
+.icon li:hover{
+	background-color: darkorange;
+}
+
+.crap{
+    margin-bottom: 70px;
+    margin-top: -50px;
+}
+
+.footer .wrap .crap h1{
+    color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+
+}
+
+.crap h1 span{
+    color: darkorange;
+}
+.crap h2{
+    font-size: 15px;
+    margin-top: 10px;
+}
+/*End of footer*/
